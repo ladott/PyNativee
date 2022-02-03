@@ -1,0 +1,20 @@
+import string, secrets, random
+size = int(input("What is pass size? "))
+
+x = []
+
+for i in range(size):
+  if (i == 1 or i == (size / 2) or i == (size - 1)):
+    y = random.randrange(1, 10)
+    x.append(y)
+  elif (i == 2 or i == (size - 2)):
+    g = random.choice(["$", "%", "&", "^", "!", "*"])
+    x.append(g)
+  else:
+    l = secrets.choice(string.ascii_letters)
+    x.append(l)
+
+for m in (x):
+  print(m, end="")
+  
+print(" Your Password")
